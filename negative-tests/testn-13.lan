@@ -1,6 +1,5 @@
 Label L ::= (a) 
 Process P ::= (a P) | (sequence P P) 
-Relation ::= (step Process Label Process)
 
 (a P) --(a)--> P. 
 
