@@ -22,8 +22,8 @@ What it does:  <br />
 <ul>
 <li> Applies GSOS-Validator, as specified in <b>gsos.tr</b>, to all the language definitions .lan of the folder "languages". 
 <li> for each .lan file, say, myfile.lan, 
-	<br /> if GSOS: our tool displays the message <i>myfile.lan is a GSOS language.</i> 
-	<br /> if not GSOS: our tool provides an error message. (See below for examples of negative tests.)
+	<br /> if it is a GSOS language: our tool displays the message "<i>myfile.lan is a GSOS language.</i>"
+	<br /> if it is not a GSOS language: our tool provides an error message. 
 </ul>
 
 To clean: <br />
