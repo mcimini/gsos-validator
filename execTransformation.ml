@@ -23,7 +23,8 @@ let rec execTransformation (lan : language) (tr : e) = match tr with
 	| LISTDIFF(e1,e2) -> let list_difference a b = let notpresent x = not (List.mem x b) in List.filter notpresent a in 
 						let l1 = tr_getList (execTransformation lan e1) in 
 						let l2 = tr_getList (execTransformation lan e2) in 
-						if false then raise(Failure ("execTransformation, LISTDIFF: " ^ print_e (LIST l1) ^  print_e (LIST l2))) else
+						(* if true then raise(Failure ("execTransformation, LISTDIFF: " ^ print_e (LIST l1) ^  print_e (LIST l2))) else *)
+						if false then raise(Failure ("execTransformation, LISTDIFF: " ^ dump l1 ^  dump l2)) else
 							LIST(list_difference l1 l2)
 	| IN(e1,e2) -> 	let v = execTransformation lan e1 in 
 					let l = tr_getList (execTransformation lan e2) in 

@@ -1,6 +1,6 @@
 rules[-->]: premises must match | P -- (op []) --> P' | P -/- (op []) --> otherwise error "Premises must be either positive labeled transitions or negative labeled transitions, and their label must be a constant"  
 
-rules[-->]: match conclusion with ((op Ps) -- (op []) --> P') -> Ps[P]: if not (isVar(P)) then error "The operator that is the subject of the conclusion must have all metavariables as arguments" else skip otherwise error "Conclusion formulae must be positive labeled transitions with a constant label and must apply to an operator"
+rules[-->]: match conclusion with (op Ps) -- (op []) --> P' -> Ps[P]: if not (isVar(P)) then error "The operator that is the subject of the conclusion must have all metavariables as arguments" else skip otherwise error "Conclusion formulae must be positive labeled transitions with a constant label and must apply to an operator"
 
 rules[-->]: if not (premises.LTsources sublistOf getVars(conclusion.LTsource)) then error "Sources of premises must be arguments of the operator in the source of the conclusion" else premises.LTtargets[P]: if not (isVar(P)) then error "Targets of premises must be metavariables" else skip
 

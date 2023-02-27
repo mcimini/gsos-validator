@@ -157,11 +157,10 @@ pattern :
 	| source = pattern LEFTOFSTEP label = pattern STEP metavar2 = ID
 	{ PFORMULA("step", [source ; label ; PVAR metavar2]) }
 	| source = pattern NOSTEP label = pattern STEP 
-	{ PFORMULA("nstep", [source ; PVAR "L"]) }
+	{ PFORMULA("nstep", [source ; label]) }
+//*	{ PFORMULA("nstep", [source ; PVAR "L"]) } *//
 	| LSQUARE RSQUARE
 	{ PEMPTY }
-	| LPAREN p = pattern RPAREN
-	{ p }
 
 word: 
 	| str = ID

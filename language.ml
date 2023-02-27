@@ -168,7 +168,8 @@ let substitution_byPairs e1 (var,e2) = substitution e1 var e2
 let substitution_double_pair_on_pair e (var1,var2) (e1,e2)  = substitution (substitution e var1 e1) var2 e2
 
 let rec tr_match (p : pattern) (expToMatch :  e) = match (p,expToMatch) with 
-	| (PVAR(var), e) -> [var,e]
+	| (PVAR(var), e) -> if false then raise(Failure ("tr_match: PVAR" ^ var ^ (dump e))) else  
+		[var,e]
 	| ( PFORMULA(pred1,patterns), FORMULA(Formula(pred2, terms)) ) -> 
 		(if pred1 = pred2 && (List.length patterns = List.length terms) 
 			then List.concat (List.map tr_match_byPairs (List.combine patterns (List.map tr_to_term terms)))
@@ -189,6 +190,7 @@ let rec tr_select (outputExp : e) (p : pattern) (expsToMatch : e list) : e list 
 	| [] -> []
 	| head :: rest -> 	try let bindings = tr_match p head in 
 								let outputExpWithSelfSubstituted = substitution outputExp "self" head in 
+								 if false then raise(Failure ("tr_select: " ^ (dump outputExp) ^ (dump outputExpWithSelfSubstituted))) else  
 								(List.fold_left substitution_byPairs outputExpWithSelfSubstituted bindings) :: (tr_select outputExp p rest) 
 						with | LTR_match_failure -> tr_select outputExp p rest
 
