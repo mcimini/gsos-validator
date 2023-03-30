@@ -2,12 +2,12 @@
 
 Author: Matteo Cimini (matteo_cimini@uml.edu)
 	<br />
-# <a name="instructions"></a>Instructions 
 <br />
 
 <i style="color : name_color">GSOS-Validator is described in the paper in the folder <a href="docs/">"docs"</a>.<i>
 
 <br />
+# <a name="instructions"></a>Instructions 
 
 Requirements: 
 <br />
