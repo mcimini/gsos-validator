@@ -33,7 +33,7 @@ let languagesFromRepo () =
 let parseOneLanguage filename : language =
   (* Parse the language, lan is the parsed language *)
   let input = open_in filename in 
-  let filebuf = Lexing.from_input input in
+  let filebuf = Lexing.from_channel input in
   let unusedVar = print_endline ("Reading the language: " ^ filename) in 
   let lan = try (ParserLan.fileLan LexerLan.token filebuf) with
 						    | LexerLan.Error msg -> raise(Failure("Lexer error: " ^ get_positions filebuf ^ " with message: " ^ msg))
@@ -42,7 +42,7 @@ let parseOneLanguage filename : language =
 let parseTheTransformation filename = 
    (* Parse the transformation, transformation is the var of the parsed schema *)
    let inputSchema = (open_in filename) in
-   let filebuf = Lexing.from_input inputSchema in
+   let filebuf = Lexing.from_channel inputSchema in
    let transformation = try (Parser.file Lexer.token filebuf) with
  						    | Lexer.Error msg -> raise(Failure("Lexer error: " ^ get_positions filebuf ^ " with message: " ^ msg))
  						    | Parser.Error -> raise(Failure("Parser error: " ^ get_positions filebuf)) in
