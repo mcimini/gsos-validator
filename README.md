@@ -38,7 +38,7 @@ To clean: <br />
 
 
 
-# <a name="negative"></a>Our negative tests 
+# <a name="negative"></a>Negative tests 
 
 To run our negative tests:  
 <br />
