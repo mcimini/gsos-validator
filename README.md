@@ -2,7 +2,7 @@
 
 Author: Matteo Cimini (matteo_cimini@uml.edu)
 <br />
-<i style="color : name_color">GSOS-Validator is described in the paper in the folder <a href="docs/">"docs"</a>.<i> (To appear in <a href="https://places-workshop.github.io/2023/">PLACES'23</a>)
+<i style="color : name_color">GSOS-Validator is described in the paper in the folder <a href="docs/">"docs"</a>.<i> (To appear in <a href="https://places-workshop.github.io/2023/">PLACES'23</a>)</i>
 <br />
 
 # <a name="instructions"></a>Instructions 
