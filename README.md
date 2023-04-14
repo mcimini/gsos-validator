@@ -2,7 +2,8 @@
 
 Author: Matteo Cimini (matteo_cimini@uml.edu)
 <br />
-<b><i>GSOS-Validator is described in the paper: <a HREF="https://dx.doi.org/10.4204/EPTCS.378.2">
+<b><i>GSOS-Validator is described in the paper: 
+	  <br><a HREF="https://dx.doi.org/10.4204/EPTCS.378.2">
 A Declarative Validator for GSOS Languages.</i></b></a>
   <br>Matteo Cimini.
 <br> In <i>Proceedings of the 14th International Workshop on Programming Language Approaches to Concurrency- and Communication-cEntric Software <br>
