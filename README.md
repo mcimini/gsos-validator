@@ -2,6 +2,7 @@
 
 Author: Matteo Cimini (matteo_cimini@uml.edu)
 <br />
+<br />
 <b><i>GSOS-Validator is described in the paper: 
 	  <br><a HREF="https://dx.doi.org/10.4204/EPTCS.378.2">
 A Declarative Validator for GSOS Languages.</i></b></a>
