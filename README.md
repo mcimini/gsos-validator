@@ -9,7 +9,6 @@ A Declarative Validator for GSOS Languages.</i></b></a>
   <br>Matteo Cimini.
 <br> In <i>Proceedings of the 14th International Workshop on Programming Language Approaches to Concurrency- and Communication-cEntric Software <br>
 (<a href="https://places-workshop.github.io/2023/">PLACES 2023</a>)</i>, pages 14-25, April 2023. 	
-<br> A preprint of the paper is in the folder <a href="docs/">"docs"</a>. 
 <br />
 
 # <a name="instructions"></a>Instructions 
